@@ -55,7 +55,7 @@ The main limitations are GoPro's repeat purchases and channel inventory, adoptio
 
 ## References
 
-Sources checked October 8-9, 2026. Filing table locations are in [references/sources.md](references/sources.md).
+Sources checked October 8-9, 2026. Filing table locations are in [references/sources.md](../references/sources.md).
 
 1. Mateo, A. (2025, October 9). [HoverAir X1 ProMax](https://time.com/collections/best-inventions-2025/7318494/hoverair-x1-promax/). TIME.
 2. GoPro. (2014). [Form S-1](https://www.sec.gov/Archives/edgar/data/1500435/000119312514204902/d552193ds1.htm), pp. 55-56.
@@ -64,6 +64,6 @@ Sources checked October 8-9, 2026. Filing table locations are in [references/sou
 5. GoPro. (2021). [FY2020 Form 10-K](https://www.sec.gov/Archives/edgar/data/1500435/000150043521000020/gpro-20201231.htm), p. 49.
 6. GoPro. (2022). [FY2021 Form 10-K](https://www.sec.gov/Archives/edgar/data/1500435/000150043522000016/gpro-20211231.htm), MD&A, Revenue.
 7. GoPro. (2025). [FY2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/1500435/000162828025013046/gpro-20241231.htm), p. 41.
-8. Hovhannisyan, K. (n.d.). [Bass Model for Innovation Diffusion](references/DS-223-Bass-model.pdf). DS 223, AUA. Slides 34 and 40 (PDF pages 45 and 51).
+8. Hovhannisyan, K. (n.d.). [Bass Model for Innovation Diffusion](../references/DS-223-Bass-model.pdf). DS 223, AUA. Slides 34 and 40 (PDF pages 45 and 51).
 9. Goldman Sachs. (2023, April 19). [The creator economy could approach half-a-trillion dollars by 2027](https://www.goldmansachs.com/insights/articles/the-creator-economy-could-approach-half-a-trillion-dollars-by-2027). Creator estimate only; the three fractions are author assumptions.
 10. HOVERAir. (2024, August 26). [X1 Pro / ProMax launch campaign](https://hoverair.com/blogs/news/hoverair-launches-worlds-first-8k-flying-action-camera). Campaign date and announced MSRP.
