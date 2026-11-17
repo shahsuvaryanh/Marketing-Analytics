@@ -16,8 +16,8 @@ On Windows, activate the environment with `.venv\Scripts\activate` instead.
 The script logs the cumulative and average reward and regret for each algorithm. It also creates:
 
 - `output/rewards.csv`: 20,000 observations per algorithm, with exactly the columns `Bandit`, `Reward`, and `Algorithm`. Bandit numbers run from 1 to 4.
-- `output/EpsilonGreedy_learning.png`: estimated reward means on linear and logarithmic trial axes.
-- `output/ThompsonSampling_learning.png`: posterior reward means on linear and logarithmic trial axes.
+- `output/epsilon_greedy_learning.png`: estimated reward means on linear and logarithmic trial axes.
+- `output/thompson_sampling_learning.png`: posterior reward means on linear and logarithmic trial axes.
 - `output/comparison.png`: cumulative reward and regret for the two algorithms.
 
 Running the script again replaces these results. The seeds are fixed so the experiment can be reproduced.

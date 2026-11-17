@@ -141,7 +141,9 @@ class Visualization:
             axes[0].legend(loc="lower right", ncol=2)
             fig.suptitle(f"{type(algorithm).__name__}: learning the reward means\n"
                          "Dashed lines show the true means")
-            fig.savefig(self.output_dir / f"{type(algorithm).__name__}_learning.png", dpi=180)
+            filename = {"EpsilonGreedy": "epsilon_greedy_learning.png",
+                        "ThompsonSampling": "thompson_sampling_learning.png"}[type(algorithm).__name__]
+            fig.savefig(self.output_dir / filename, dpi=180)
             plt.close(fig)
 
     def plot2(self):
