@@ -188,7 +188,7 @@ class EpsilonGreedy(Bandit):
         """Run the epsilon-greedy experiment and return its recorded results."""
         return self._run(reward_table)
 
-    def report(self, csv_path="output/rewards.csv"):
+    def report(self, csv_path="data/rewards.csv"):
         """Append rewards to CSV and log cumulative and average performance."""
         self._report(csv_path)
 
@@ -222,14 +222,14 @@ class ThompsonSampling(Bandit):
         """Run the Thompson Sampling experiment and return its recorded results."""
         return self._run(reward_table)
 
-    def report(self, csv_path="output/rewards.csv"):
+    def report(self, csv_path="data/rewards.csv"):
         """Append rewards to CSV and log cumulative and average performance."""
         self._report(csv_path)
 
 
 def comparison(output_dir=None):
     """Run both policies for 20,000 trials and save exactly one combined reward CSV."""
-    output_dir = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent / "output"
+    output_dir = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent
     output_dir.mkdir(parents=True, exist_ok=True)
     bandit_reward = [1, 2, 3, 4]
     number_of_trials = 20000
@@ -240,14 +240,15 @@ def comparison(output_dir=None):
     )
     algorithms = [EpsilonGreedy(bandit_reward, number_of_trials, precision),
                   ThompsonSampling(bandit_reward, number_of_trials, precision)]
-    csv_path = output_dir / "rewards.csv"
+    csv_path = output_dir / "data" / "rewards.csv"
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
     # Re-running replaces the previous experiment instead of duplicating CSV rows.
     with csv_path.open("w", newline="", encoding="utf-8") as stream:
         csv.writer(stream).writerow(["Bandit", "Reward", "Algorithm"])
     for algorithm in algorithms:
         algorithm.experiment(reward_table)
         algorithm.report(csv_path)
-    visualizer = Visualization(algorithms, output_dir)
+    visualizer = Visualization(algorithms, output_dir / "img")
     visualizer.plot1()
     visualizer.plot2()
     return algorithms
